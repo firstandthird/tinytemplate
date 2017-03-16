@@ -1,0 +1,61 @@
+{
+  "name": "tinytemplate",
+  "version": "1.0.0",
+  "description": "Complication-free template function. Just basic object interpolation with an ES6 style.",
+  "main": "dist/tinytemplate.js",
+  "module": "index.js",
+  "keywords": [
+    "template",
+    "string"
+  ],
+  "scripts": {
+    "start": "scriptkit",
+    "build": "scriptkit build",
+    "dev": "scriptkit dev",
+    "test": "cat test/tinytemplate.test.dist.js | tape-run --static . --browser phantomjs --render tap-spec",
+    "prepublish": "scriptkit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstandthird/tinytemplate.git"
+  },
+  "author": "First+Third",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/firstandthird/tinytemplate/issues"
+  },
+  "homepage": "https://github.com/firstandthird/tinytemplate#readme",
+  "devDependencies": {
+    "eslint-config-firstandthird": "3.2.0",
+    "eslint-plugin-import": "2.2.0",
+    "phantomjs-prebuilt": "2.1.14",
+    "scriptkit": "0.2.0",
+    "tap-spec": "4.1.1",
+    "tape-rollup": "4.6.4",
+    "tape-run": "2.2.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "extends": "firstandthird"
+  },
+  "scriptkit": {
+    "files": {
+      "dist/tinytemplate.js": "index.js",
+      "test/tinytemplate.test.dist.js": "test/tinytemplate.test.js"
+    },
+    "scripts": {
+      "babel": {
+        "exclude": [
+          "node_modules/tape-rollup/*"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "@firstandthird/cookie-monster": "^2.0.0",
+    "aug": "^1.0.2",
+    "domassist": "^1.7.2"
+  }
+}
