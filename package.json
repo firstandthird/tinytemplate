@@ -1,6 +1,6 @@
 {
   "name": "tinytemplate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Complication-free template function. Just basic object interpolation with an ES6 style.",
   "main": "dist/tinytemplate.js",
   "module": "index.js",
